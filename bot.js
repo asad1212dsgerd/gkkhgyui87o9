@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = 'B'
+const prefix = '-'
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -340,7 +340,7 @@ function play(guild, song) {
 
 
 client.on('message', message => {
-    if (message.content === 'help') {
+    if (message.content === '-help') {
         let helpEmbed = new Discord.RichEmbed()
         .setTitle('**أوامر الميوزك...**')
         .addField('play', 'لتشغيل اغنية')
@@ -373,7 +373,7 @@ client.on('message', message => {
 
 
     const adminprefix = "-v";
-const devs = ['448656937601597452','446463286838427648'];
+const devs = ['335386059364106243','437589976117673995'];
 client.on('message', message => {
   var argresult = message.content.split(` `).slice(1).join(' ');
     if (!devs.includes(message.author.id)) return;
